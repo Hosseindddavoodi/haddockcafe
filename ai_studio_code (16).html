@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADDOCK CAFE | کافه هادوک</title>
+    
+    <!-- فونت‌های حرفه‌ای -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --gold: #D4AF37; --dark-blue: #0A1128; --black: #050505; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--black); color: #e5e5e5; font-family: 'Vazirmatn', sans-serif; }
+        .font-luxury { font-family: 'Cinzel', serif; }
+        .gold-text { color: var(--gold); }
+        .glass-nav { background: rgba(10, 17, 40, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        section { scroll-margin-top: 80px; }
+        
+        /* استایل اختصاصی منو */
+        .menu-category-title { 
+            border-right: 5px solid var(--gold); 
+            padding-right: 15px; 
+            margin: 4rem 0 2rem 0; 
+            color: white; 
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(to left, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .item-row { 
+            display: flex; 
+            flex-direction: column;
+            padding: 20px 0; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease; 
+        }
+        .item-row:hover { background: rgba(212, 175, 55, 0.03); padding-right: 15px; }
+        
+        .item-main { display: flex; justify-content: space-between; align-items: flex-end; width: 100%; }
+        .line-connector { border-bottom: 1px dotted rgba(212, 175, 55, 0.3); flex-grow: 1; margin: 0 15px; margin-bottom: 8px; }
+        
+        .price { 
+            font-weight: bold; color: var(--gold); min-width: 110px; text-align: left; 
+            font-family: 'Montserrat', sans-serif; direction: ltr; font-size: 1.1rem;
+        }
+        .desc { font-size: 0.85rem; color: #999; margin-top: 8px; max-width: 85%; line-height: 1.6; }
+        
+        .gallery-img { width: 100%; height: 350px; object-fit: cover; border-radius: 12px; transition: 0.6s; filter: brightness(0.7); border: 1px solid rgba(255,255,255,0.1); }
+        .gallery-img:hover { filter: brightness(1.1); transform: scale(1.02); }
+
+        .phone-number { direction: ltr; display: inline-block; font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.png" alt="HADDOCK" class="h-12 w-auto brightness-125">
+                <div class="mr-3">
+                    <span class="block font-luxury gold-text text-xl leading-none">HADDOCK</span>
+                    <span class="text-[10px] uppercase tracking-[3px] text-blue-300">Cafe & Resto</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-10 space-x-reverse text-sm uppercase tracking-widest font-light">
+                <a href="#home" class="hover:text-[#D4AF37] transition">خانه</a>
+                <a href="#gallery" class="hover:text-[#D4AF37] transition">گالری</a>
+                <a href="#menu" class="hover:text-[#D4AF37] transition">منو</a>
+                <a href="#about" class="hover:text-[#D4AF37] transition">درباره ما</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition">تماس</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION: HOME -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <img src="3.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-20 text-center">
+            <h1 class="text-7xl md:text-9xl font-luxury gold-text mb-4 drop-shadow-2xl">HADDOCK</h1>
+            <p class="text-lg md:text-2xl font-light text-gray-300 tracking-[8px] uppercase">Premium Coffee & Dining</p>
+        </div>
+    </section>
+
+    <!-- SECTION: GALLERY -->
+    <section id="gallery" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-luxury gold-text text-center mb-16">GALLERY</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="1.jpg" class="gallery-img">
+                <img src="2.jpg" class="gallery-img">
+                <img src="4.jpg" class="gallery-img">
+                <img src="5.jpg" class="gallery-img md:col-span-2">
+                <img src="3.jpg" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MENU -->
+    <section id="menu" class="py-24" style="background: linear-gradient(to bottom, #050505, #0A1128);">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-6xl font-luxury gold-text text-center mb-24">CAFE MENU</h2>
+
+            <!-- نوشیدنی های گرم -->
+            <h2 class="text-3xl gold-text font-bold mb-4 italic">نوشیدنی گرم</h2>
+            
+            <h3 class="menu-category-title">قهوه</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>اسپرسو تک</span><div class="line-connector"></div><span class="price">190,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>اسپرسو دبل</span><div class="line-connector"></div><span class="price">235,000</span></div><p class="desc">پنجاه درصد عربیکا + پنجاه درصد روبوستا (دبل شات )</p></div>
+                <div class="item-row"><div class="item-main"><span>اسپرسو- عربیکا</span><div class="line-connector"></div><span class="price">259,000</span></div><p class="desc">100% عربیکا</p></div>
+                <div class="item-row"><div class="item-main"><span>امریکانو</span><div class="line-connector"></div><span class="price">249,000</span></div><p class="desc">پنجاه درصد عربیکا + پنجاه درصد روبوستا + آب</p></div>
+                <div class="item-row"><div class="item-main"><span>لاته</span><div class="line-connector"></div><span class="price">289,000</span></div><p class="desc">شات قهوه + شیر</p></div>
+                <div class="item-row"><div class="item-main"><span>کاپوچینو</span><div class="line-connector"></div><span class="price">285,000</span></div><p class="desc">شات قهوه + شیر + فوم بیشتر</p></div>
+                <div class="item-row"><div class="item-main"><span>کورتادو</span><div class="line-connector"></div><span class="price">275,000</span></div><p class="desc">شات قهوه + شیر ( نسبت یک به یک )</p></div>
+                <div class="item-row"><div class="item-main"><span>سینمون لاته</span><div class="line-connector"></div><span class="price">325,000</span></div><p class="desc">شات قهوه + شیر + سیروپ دارچین</p></div>
+                <div class="item-row"><div class="item-main"><span>لاته لوتوس</span><div class="line-connector"></div><span class="price">359,000</span></div><p class="desc">شات قهوه + شیر + سیروپ بیسکویت</p></div>
+                <div class="item-row"><div class="item-main"><span>کارامل ماکیاتو</span><div class="line-connector"></div><span class="price">329,000</span></div><p class="desc">شات قهوه + شیر + سیروپ کارامل</p></div>
+                <div class="item-row"><div class="item-main"><span>موکا</span><div class="line-connector"></div><span class="price">365,000</span></div><p class="desc">شات قهوه + شیر + سیروپ شکلات</p></div>
+                <div class="item-row"><div class="item-main"><span>قهوه ترک</span><div class="line-connector"></div><span class="price">230,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>هات چاکلت ساده</span><div class="line-connector"></div><span class="price">305,000</span></div><p class="desc">هات چاکلت 45 گرم + 200 گرم شیر</p></div>
+                <div class="item-row"><div class="item-main"><span>هات چاکلت فندق</span><div class="line-connector"></div><span class="price">345,000</span></div><p class="desc">هات چاکلت 35 گرم + 200 گرم شیر</p></div>
+                <div class="item-row"><div class="item-main"><span>هات چاکلت دارک</span><div class="line-connector"></div><span class="price">329,000</span></div><p class="desc">هات چاکلت 35 گرم + 200 گرم شیر</p></div>
+            </div>
+
+            <h3 class="menu-category-title">چای و دمنوش</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>چایی ساده</span><div class="line-connector"></div><span class="price">140,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چایی سیب و هل</span><div class="line-connector"></div><span class="price">155,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چایی کارامل</span><div class="line-connector"></div><span class="price">165,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چای ماسالا</span><div class="line-connector"></div><span class="price">245,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چای کرک</span><div class="line-connector"></div><span class="price">250,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چای زعفران گلاب</span><div class="line-connector"></div><span class="price">235,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چای ترش</span><div class="line-connector"></div><span class="price">280,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیر عسل دارچین</span><div class="line-connector"></div><span class="price">205,000</span></div></div>
+            </div>
+
+            <!-- نوشیدنی سرد -->
+            <h2 class="text-3xl gold-text font-bold mb-4 italic mt-20">نوشیدنی سرد</h2>
+            
+            <h3 class="menu-category-title">قهوه سرد</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>کن هیلو</span><div class="line-connector"></div><span class="price">240,000</span></div><p class="desc">لیوان یخ + شات اسپرسو</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس امریکانو</span><div class="line-connector"></div><span class="price">249,000</span></div><p class="desc">شات قهوه + آّب سرد</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس لاته</span><div class="line-connector"></div><span class="price">289,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ )</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس لاته وانیل</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ ) + سیروپ وانیل</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس لاته دارچین</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ) + سیروپ دارچین</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس لاته توت فرنگی</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ) + سیروپ توت فرنگی</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس لاته فندوق</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ ) + سیروپ فندوق</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس کارامل</span><div class="line-connector"></div><span class="price">329,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ ) + سس کارامل</p></div>
+                <div class="item-row"><div class="item-main"><span>آیس موکا</span><div class="line-connector"></div><span class="price">365,000</span></div><p class="desc">شات قهوه + شیر سرد (یخ) + سس شکلات</p></div>
+                <div class="item-row"><div class="item-main"><span>اورنج کافی</span><div class="line-connector"></div><span class="price">330,000</span></div><p class="desc">شات قهوه + آب پرتقال</p></div>
+                <div class="item-row"><div class="item-main"><span>اسپرسو تونیک</span><div class="line-connector"></div><span class="price">305,000</span></div><p class="desc">شات قهوه + تونیک واتر + لیمو و نمک</p></div>
+                <div class="item-row"><div class="item-main"><span>دالگونا</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">نسکافه + شکر+ یخ + شیر</p></div>
+                <div class="item-row"><div class="item-main"><span>فراپه</span><div class="line-connector"></div><span class="price">275,000</span></div><p class="desc">اسپرسو + شیر + بستنی + سیروپ دلخواه</p></div>
+                <div class="item-row"><div class="item-main"><span>آفاگاتو</span><div class="line-connector"></div><span class="price">315,000</span></div><p class="desc">بستنی 30 گرم + شات قهوه</p></div>
+            </div>
+
+            <h3 class="menu-category-title">آیس تی و شیک</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>آیس تی رد وانیلا</span><div class="line-connector"></div><span class="price">249,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>آیس تی انبه</span><div class="line-connector"></div><span class="price">205,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>آیس تی هلو</span><div class="line-connector"></div><span class="price">205,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک اسپرسو</span><div class="line-connector"></div><span class="price">305,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک نوتلا</span><div class="line-connector"></div><span class="price">390,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک شکلات</span><div class="line-connector"></div><span class="price">280,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک تیرامیسو / لوتوس</span><div class="line-connector"></div><span class="price">335,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک توت فرنگی شاتوت</span><div class="line-connector"></div><span class="price">335,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک بادام زمینی / موز کارامل</span><div class="line-connector"></div><span class="price">325,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>شیک وانیل</span><div class="line-connector"></div><span class="price">279,000</span></div></div>
+            </div>
+
+            <h3 class="menu-category-title">اسموتی و سافت</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>اسموتی هندوانه</span><div class="line-connector"></div><span class="price">155,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>اسموتی ( توت فرنگی – موز)</span><div class="line-connector"></div><span class="price">285,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>اسموتی ( طالبی – موز)</span><div class="line-connector"></div><span class="price">230,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>سافت هادوک</span><div class="line-connector"></div><span class="price">350,000</span></div><p class="desc">چایی ترش + اسپرایت + لیمو + پشن فروت</p></div>
+                <div class="item-row"><div class="item-main"><span>سافت پرتقال پشن / نستور</span><div class="line-connector"></div><span class="price">295,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>سافت لیمو / آلوورا</span><div class="line-connector"></div><span class="price">265,000</span></div></div>
+            </div>
+
+            <h3 class="menu-category-title">ماچا (Matcha)</h3>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>ماچالاته / آیس ماچا لاته</span><div class="line-connector"></div><span class="price">335,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>فراپه ماچا</span><div class="line-connector"></div><span class="price">355,000</span></div><p class="desc">یک شات ماچا + شیر + بستنی + یخ +سیروپ وانیل</p></div>
+                <div class="item-row"><div class="item-main"><span>ماچاگاتو</span><div class="line-connector"></div><span class="price">345,000</span></div></div>
+            </div>
+
+            <!-- بخش غذا - کاملا تفکیک شده -->
+            <h2 class="text-3xl gold-text font-bold mb-4 italic mt-20">غذا</h2>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>چاپاتای هالوچیکن <span class="text-red-500 text-[10px]">تند</span></span><div class="line-connector"></div><span class="price">650,000</span></div><p class="desc">فیله مرغ سوخاری 200 گرم + پنیر چدار + هالوپینو+ گوجه خشک+ سس مخصوص + رب انار و باربیکیو</p></div>
+                <div class="item-row"><div class="item-main"><span>چاپاتای هانی چیکن</span><div class="line-connector"></div><span class="price">750,000</span></div><p class="desc">نان چاپاتا، 300 گرم سینه مرغ سوخاری، پنیر چدار، کلم قرمز، جعفری و سالاد مخصوص</p></div>
+                <div class="item-row"><div class="item-main"><span>چاپاتای مکزیکی <span class="text-red-500 text-[10px]">تند</span></span><div class="line-connector"></div><span class="price">850,000</span></div><p class="desc">نان چاپاتا + 200 گرم گوشت چرخ کرده گوساله + قارچ + فلفل دلمه ایی + روکولا + پنیر پیتزا + هالوپینو</p></div>
+                <div class="item-row"><div class="item-main"><span>هات میلو</span><div class="line-connector"></div><span class="price">485,000</span></div><p class="desc">نان چاپاتا + هات داگ + سس مخصوص + سس خردل+روکولا</p></div>
+                <div class="item-row"><div class="item-main"><span>کالزونه مخلوط</span><div class="line-connector"></div><span class="price">435,000</span></div><p class="desc">خمیر تردیلا - سوسیس و کالباس - قارچ و پنیر</p></div>
+            </div>
+
+            <!-- بخش صبحانه - کاملا تفکیک شده -->
+            <h2 class="text-3xl gold-text font-bold mb-4 italic mt-20">صبحانه</h2>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>دوپونت و دوپونط</span><div class="line-connector"></div><span class="price">405,000</span></div><p class="desc">تخم مرغ 2 عدد + سوسیس + قارچ + سیب زمینی سرخ کرده</p></div>
+                <div class="item-row"><div class="item-main"><span>املت گوجه</span><div class="line-connector"></div><span class="price">260,000</span></div><p class="desc">تخم مرغ 2 عدد + پوره گوچه</p></div>
+                <div class="item-row"><div class="item-main"><span>تست کره بادام زمینی</span><div class="line-connector"></div><span class="price">310,000</span></div><p class="desc">یک عدد نان تست + 30 گرم کره بادام زمینی و عسل</p></div>
+            </div>
+
+            <!-- بخش دسر - کاملا تفکیک شده -->
+            <h2 class="text-3xl gold-text font-bold mb-4 italic mt-20">دسر</h2>
+            <div class="space-y-1">
+                <div class="item-row"><div class="item-main"><span>کروسان کره ای</span><div class="line-connector"></div><span class="price">190,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>رول دارچین</span><div class="line-connector"></div><span class="price">199,000</span></div></div>
+                <div class="item-row"><div class="item-main"><span>چاکلت تویست</span><div class="line-connector"></div><span class="price">245,000</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ABOUT -->
+    <section id="about" class="py-32 bg-[#050A1A]">
+        <div class="max-w-4xl mx-auto text-center px-6 leading-[3.5rem]">
+            <h2 class="text-4xl gold-text font-luxury mb-12">THE STORY OF HADDOCK</h2>
+            <p class="text-xl md:text-2xl text-gray-300 font-light italic">
+                کافه هادوک، پاتوقی دنج در قلب میدان شیخ بهایی شمالی، جایی است که عطر قهوه و شیرینی با لحظات شما گره می‌خورد. از صبح تا شب، با محیطی گرم و دوستانه مخصوص دانشجویان و جوانان، همراه شماییم تا بهترین لحظات خود را با یک فنجان قهوه خاص و ساندویچ‌های خوش‌طعم بسازید. بیاید هادوک را تجربه کنید!
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION: CONTACT -->
+    <footer id="contact" class="py-24 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div class="space-y-10">
+                <h2 class="text-4xl gold-text font-luxury">VISIT US</h2>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-blue-300 text-sm uppercase tracking-widest mb-2">Location</p>
+                        <p class="text-xl">ونک، شیخ بهایی شمالی، خیابان اوستا، نبش رهبری انصاری، پلاک 41</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-300 text-sm uppercase tracking-widest mb-2">Service Phone</p>
+                        <p class="text-3xl gold-text font-luxury tracking-widest leading-none">
+                            <span class="phone-number">021 86053436</span>
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <p class="text-blue-300 text-sm uppercase tracking-widest mb-4">Working Hours</p>
+                        <ul class="text-gray-400 space-y-2 text-sm">
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>شنبه تا چهارشنبه:</span> <span>07:00 - 21:00</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>پنج شنبه:</span> <span>08:30 - 21:30</span></li>
+                            <li class="flex justify-between"><span>جمعه:</span> <span>09:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://www.instagram.com/haddok_cafe" target="_blank" class="inline-block text-2xl hover:text-white transition border-b border-gold pb-1 mt-4">@haddok_cafe</a>
+                </div>
+            </div>
+            
+            <div class="h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.1568285511394!2d51.39611397637825!3d35.75920952564478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e072f6a73a62d%3A0xe726f18374828131!2sHaddock%20Cafe!5e0!3m2!1sen!2s!4v1715858032486!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-[10px] text-gray-700 uppercase tracking-[4px]">
+            © 2024 HADDOCK CAFE | Premium Experience
+        </div>
+    </footer>
+
+</body>
+</html>
